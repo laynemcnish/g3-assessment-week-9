@@ -25,6 +25,10 @@ form ul{
     list-style-type: none;
 }
 
+form li{
+    list-style: none
+}
+
 ul {
     margin-left:0;
     padding-left:0;
@@ -44,4 +48,12 @@ td {
     padding: 5px;
     margin: 5px;
     width: 70px
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none
 }
