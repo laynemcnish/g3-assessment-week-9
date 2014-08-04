@@ -23,17 +23,23 @@
   </div>
   <div class="col-lg-8">
     <h2>ToDo List</h2>
-    <ul class="todos">
-      <% todos.each do |todo| %>
-        <li><%= todo.body %>
-          <form method="get" action="/edit/<%= todo.id %>">
-            <button type="submit">Edit</button>
-          </form>
-          <form method="post" action="/complete/<%= todo.id %>">
-            <button type="submit">Complete</button>
-          </form>
-        </li>
-      <% end %>
-    </ul>
+    <% todos.each do |todo| %>
+      <table class="todos">
+        <tr>
+          <td><%= todo.body %></td>
+          <td>
+            <form method="get" action="/edit/<%= todo.id %>">
+              <button type="submit">Edit</button>
+            </form>
+          </td>
+          <td>
+            <form method="post" action="/complete/<%= todo.id %>">
+              <button type="submit">Complete</button>
+            </form>
+          </td>
+
+        </tr>
+      </table>
+    <% end %>
   </div>
 </div>
